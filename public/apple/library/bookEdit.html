@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yerin's html projects</title>
+<style type="text/css">
+ 	table, th, td {
+ 		border: 1px solid black;
+ 		border-collapse: collapse;
+	 }
+	 
+	 th, td {
+	 	padding: 5px;
+	 }
+</style>
+</head>
+<body>
+	 bookEdit.html
+	<form action="" method="post" id="" name="" enctype="multipart/form-data">
+		<table border="1" width="700px">
+		<tr>
+			<th>사진</th>
+			<td><img src="./java_s.jpg" width="100px"><br>
+			<input type="file" id="photo" name="photo" accpet=".png, .jpg, .gif"></td>
+			<th>이름</th>
+			<td><input type="text" id="name" name="name" value="자바의 정석"></td>
+		</tr>
+		<tr>
+			<th>저자</th>
+			<td><input type="text" id="writer" name="writer" value="남궁성"></td>
+			<th>출판사</th>
+			<td><select id="pub_co" name="pub_co">
+			 		<option selected value="pc1">도우출판
+			 		<option value="pc2">에프엔미디어
+			 		<option value="pc3">한빛미디어
+			 		<option value="pc4">인사이트
+			 		<option value="pc5">위키북스
+			 		<option value="pc6">에이콘출판사
+			 	</select></td>
+		</tr>
+		<tr>
+			<th>출판일</th>
+			<td><input type="month" id="pub_mo" name="pub_mo" value="2016-02"></td>
+			<th>판매지수</th>
+			<td><input type="text" id="se_num" name="se_num" value="29934"></td>
+		</tr>
+		<tr>
+			<th>별점</th>
+			<td><input type="text" id="scope" name="scope" value="9.9"></td>
+			<th>회원리뷰</th>
+			<td><input type="text" id="review_num" name="review_num" value="188">건</td>
+		</tr>
+		<tr>
+			<th>정가</th>
+			<td><input type="text" id="price" name="price" value="30000"></td>
+			<th>판매가</th>
+			<td><input type="text" id="dis_pr" name="dis_pr" value="27000"></td>
+		</tr>
+		<tr>
+			<th>사은품</th>
+			<td colspan="3"><input type="checkbox" id="item" name="item" checked>사은품1[대학생X취준생]위클리/듀오펜<br>
+		 	<input type="checkbox" id="item" name="item">사은품2[초/중/고]겨울이벤트<br>
+		 	<input type="checkbox" id="item" name="item">사은품3[기획]디자인문고<br>
+		 	<input type="checkbox" id="item" name="item">사은품4[기획]골라보자 추천신간</td>
+		</tr>
+	</table>
+	</form>
+	<a href="./bookList.html">수정</a> <a href="./bookList.html">삭제</a> <a href="./bookList.html">목록</a>
+</body>
+</html>
