@@ -14,14 +14,39 @@
 th, td {
 	padding: 5px;
 }
-div button{
+#button{
+	width: 450px; 
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: 25%;
+	margin-bottom: 100px;
 }
 </style>
 </head>
 
 <body>
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">회원관리에 오신것을 환영합니다.</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" href="../../index.html">처음으로</a></li>
+					<li class="nav-item"><a class="nav-link" href="./memberList.html">회원목록</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="./memberForm.html">회원등록</a>
+					</li>
+					<li class="nav-item" id="liveAlertLi"><a class="nav-link">계정변경</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<h2 style="text-align: center; margin: 10px;">회원정보</h2>
 	<table class="table table-dark table-striped">
 		<tr>
@@ -155,11 +180,31 @@ div button{
 	</table>
 	<!-- <a href="./memberlist.html">목록</a> <a href="./memberEdit.html">수정</a> <a href="./memberList.html">삭제</a> -->
 
-	<div style="float:right; " class="btn-group justify-content-md-center" role="group" aria-label="Basic mixed styles example">
-		<button type="button" class="btn btn-danger" onclick="location.href='./memberList.html'">목록</button>
-		<button type="button" class="btn btn-warning" onclick="location.href='./memberEdit.html'">수정</button>
-		<button type="button" class="btn btn-success" onclick="location.href='./memberList.html'">삭제</button>
+	<div id="button">
+		<div class="btn-group col-6 justify-content-center" role="group" aria-label="Basic mixed styles example">
+			<button type="button" class="btn btn-danger" onclick="location.href='./memberList.html'">목록</button>
+			<button type="button" class="btn btn-warning" onclick="location.href='./memberEdit.html'">수정</button>
+			<button type="button" class="btn btn-success" onclick="location.href='./memberList.html'">삭제</button>
+		</div>
 	</div>
+	
+	<script type="text/javascript">
+		var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+		var alertTrigger = document.getElementById('liveAlertLi')
+	
+		function alert(message, type) {
+		  var wrapper = document.createElement('div')
+		  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+	
+		  alertPlaceholder.append(wrapper)
+		}
+	
+		if (alertTrigger) {
+		  alertTrigger.addEventListener('click', function () {
+		    alert('사용할 수 없는 기능입니다.', 'danger')
+		  })
+		}
+	</script>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script
