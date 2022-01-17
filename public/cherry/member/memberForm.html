@@ -4,178 +4,318 @@
 <meta charset="uTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>yerin's html projects</title>
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
 <style type="text/css">
- 	table, th, td {
- 		border: 1px solid black;
- 		border-collapse: collapse;
-	 }
-	 
-	 th, td {
-	 	padding: 5px;
-	 }
-	 textarea {
-	    width: 99%;
-	    height: 6.25em;
-	    resize: none;
-  }
+#button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	margin-top: 50px;
+}
+
+th, td {
+	padding: 5px;
+}
+textarea {
+	width: 100%;
+	height: 6.25em;
+	border: none;
+	resize: none;
+}
 </style>
 </head>
 
 <body>
-	 memberForm.html<br>
-	 <form action="" method="post" id="form" name="" enctype="multipart/form-data">
-	<table border="1" width="1000px">
-		<tr>
-			<th>이름</th>
-			<td><input type="text" id="name" name="name"></td>
-			<th>성별</th>
-			<td><input type="radio" id="gender" name="gender" value="m">남성 <input type="radio" id="gender" name="gender" value="w">여성</td>
-		</tr>
-		<tr>
-			<th>아이디</th>
-			<td><input type="text" id="id" name="id"></td>
-			<th>비밀번호</th>
-			<td><input type="password" id="password" name="password"></td>
-		</tr>
-		<tr>
-			<th>생일</th>
-			<td><input type="date" id="birth" name="birth"></td>
-			<th>국적</th>
-			<td><input type="text" id="nation" name="nation"></td>
-		</tr>
-		<tr>
-			<th>주소</th>
-			<td colspan="3"><input type="text" id="address" name="address"></td>
-		</tr>
-		<tr>
-			<th>모바일</th>
-			<td><select id="hp_com" name="hp_com" >
-		 		<option  selected>SKT
-		 		<option>KT
-		 		<option>LG
-		 		<option>알뜰폰
-		 	</select>&nbsp;&nbsp;
-			<input type="text" id="hp1" name="hp1" size="2"> - <input type="text" id="hp2" name="hp2" size="3"> - <input type="text" id="hp3" name="hp3" size="3"></td>
-			<th>모바일 마케팅 수신 동의</th>
-			<td><input type="radio" id="agree1" name="agree1" value="y">예 <input type="radio" id="agree1" name="agree1" value="n">아니오</td>
-		</tr>
-		<tr>
-			<th>이메일</th>
-			<td><input type="text" id="email" name="email"></td>
-			<th>이메일 마케팅 수신 동의</th>
-			<td><input type="radio" id="agree2" name="agree2" value="y">예 <input type="radio" id="agree2" name="agree2" value="n">아니오</td>
-		</tr>
-		<tr>
-			<th>전화번호</th>
-			<td><input type="text" id="p1" name="p1" size="2"> - <input type="text" id="p2" name="p2" size="3"> - <input type="text" id="p3" name="p3" size="3"></td>
-			<th>팩스번호</th>
-			<td><input type="text" id="fp1" name="fp1" size="2"> - <input type="text" id="fp2" name="fp2" size="3"> - <input type="text" id="fp3" name="fp3" size="3"></td>
-		</tr>
-		<tr>
-			<th>추천인</th>
-			<td><input type="text" id="r_name" name="r_name"></td>
-			<th>개인정보유효기간 동의</th>
-			<td><select id="cu_agree" name="cu_agree" >
-			 		<option selected value="y1">1년
-			 		<option value="y3">3년
-			 		<option value="y5">5년
-			 	</select></td>
-		</tr>
-		<tr>
-			<th>비밀번호 문제</th>
-			<td colspan="3"><input type="text" id="pass_qu" name="pass_qu"></td>
-		</tr>
-		<tr>
-			<th>비밀번호 답</th>
-			<td colspan="3"><input type="text" id="pass_an" name="pass_an"></td>
-		</tr>
-		<tr>
-			<th>sns</th>
-			<td><select id="sns" name="sns" >
-			 		<option selected value="s1">인스타그램
-			 		<option value="s2">페이스북
-			 		<option value="s3">트위터
-			 	</select></td>
-			<th>사진</th>
-			<td><input type="file" id="photo" name="photo" accpet=".png, .jpg, .gif"></td>
-		</tr>
-		<tr>
-			<th>홈페이지</th>
-			<td><input type="text" id="homepg" name="homepg"></td>
-			<th>직업(희망직업)</th>
-			<td><input type="text" id="job" name="job"></td>
-		</tr>
-		<tr>
-			<th>결혼여부</th>
-			<td><input type="radio" id="marry" name="marry" value="y">기혼 <input type="radio" id="marry" name="marry" value="n">미혼</td>
-			<th>결혼기념일</th>
-			<td><input type="date" id="ma_day" name="ma_day"></td>
-		</tr>
-		<tr>
-			<th>자녀유무</th>
-			<td><input type="radio" id="child" name="child" value="y">유 <input type="radio" id="child" name="child" value="n">무</td>
-			<th>좋아하는 색깔</th>
-			<td><input type="color" id="color" name="color"></td>
-		</tr>
-		<tr>
-			<th>취미</th>
-			<td colspan="3"><input type="checkbox" id="hobby" name="hobby">독서
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">회원관리에 오신것을 환영합니다.</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link"
+						href="../../index.html">처음으로</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./memberList.html">회원목록</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./memberForm.html">회원등록</a></li>
+					<li class="nav-item" id="liveAlertLi"><a class="nav-link">계정변경</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<form action="" method="post" id="form" name=""
+		enctype="multipart/form-data">
+		<table class="table table-striped table-hover">
+			<tr>
+				<th>이름</th>
+				<td><input class="form-control" type="text" id="name"
+					name="name"></td>
+				<th>성별</th>
+				<!-- <td><input type="radio" id="gender" name="gender" value="m">남성
+					<input type="radio" id="gender" name="gender" value="w">여성</td> -->
+				<td>
+					<div class="form-check">
+						<input class="form-check-input" type="radio"
+							name="flexRadioDefault" id="flexRadioDefault1"> <label
+							class="form-check-label" for="flexRadioDefault1"> 남성 </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio"
+							name="flexRadioDefault" id="flexRadioDefault2" checked> <label
+							class="form-check-label" for="flexRadioDefault2"> 여성 </label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<!-- <td><input class="form-control" type="text" id="id" name="id"></td> -->
+				<td>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="아이디를 입력하세요"
+							aria-label="Recipient's username"
+							aria-describedby="button-addon2">
+						<button class="btn btn-outline-secondary" type="button"
+							id="button-addon2" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">중복확인</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1"
+							aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">아이디 중복 확인</h5>
+										<button type="button" class="btn-close"
+											data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">사용 가능한 아이디입니다.</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<th>비밀번호</th>
+				<td><input type="password" id="password" name="password"></td>
+			</tr>
+			<tr>
+				<th>생일</th>
+				<td><input type="date" id="birth" name="birth"></td>
+				<th>국적</th>
+				<td><input type="text" id="nation" name="nation"></td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td colspan="3"><input type="text" id="address" name="address"></td>
+			</tr>
+			<tr>
+				<th>모바일</th>
+				<td><select id="hp_com" name="hp_com">
+						<option selected>SKT
+						<option>KT
+						<option>LG
+						<option>알뜰폰
+				</select>&nbsp;&nbsp; <input type="text" id="hp1" name="hp1" size="2">
+					- <input type="text" id="hp2" name="hp2" size="3"> - <input
+					type="text" id="hp3" name="hp3" size="3"></td>
+				<th>모바일 마케팅 수신 동의</th>
+				<!-- <td><input type="radio" id="agree1" name="agree1" value="y">예
+					<input type="radio" id="agree1" name="agree1" value="n">아니오</td> -->
+					<td>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox"
+							role="switch" id="flexSwitchCheckDefault">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="text" id="email" name="email"></td>
+				<th>이메일 마케팅 수신 동의</th>
+				<!-- <td><input type="radio" id="agree2" name="agree2" value="y">예
+					<input type="radio" id="agree2" name="agree2" value="n">아니오</td> -->
+					<td>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox"
+							role="switch" id="emailOk">
+					</div>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><input type="text" id="p1" name="p1" size="2"> - <input
+					type="text" id="p2" name="p2" size="3"> - <input
+					type="text" id="p3" name="p3" size="3"></td>
+				<th>팩스번호</th>
+				<td><input type="text" id="fp1" name="fp1" size="2"> -
+					<input type="text" id="fp2" name="fp2" size="3"> - <input
+					type="text" id="fp3" name="fp3" size="3"></td>
+			</tr>
+			<tr>
+				<th>추천인</th>
+				<td><input type="text" id="r_name" name="r_name"></td>
+				<th>개인정보유효기간 동의</th>
+				<!-- <td><select id="cu_agree" name="cu_agree">
+						<option selected value="y1">1년
+						<option value="y3">3년
+						<option value="y5">5년
+				</select></td> -->
+				<td><select class="form-select"
+					aria-label="Default select example">
+						<option value="1" selected>1년</option>
+						<option value="2">3년</option>
+						<option value="3">5년</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>비밀번호 문제</th>
+				<!-- <td colspan="3"><input type="text" id="pass_qu" name="pass_qu"></td> -->
+				<td colspan="3"><select id="pass_qu" name="pass_qu"
+					class="form-select">
+						<option value="1" selected>당신이 나온 초등학교는?</option>
+						<option value="2">제일 친한 친구는?</option>
+						<option value="3">아버지 이름은?</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>비밀번호 답</th>
+				<td colspan="3"><input class="form-control" type="text"
+					id="pass_an" name="pass_an"></td>
+			</tr>
+			<tr>
+				<th>sns</th>
+				<td><select id="sns" name="sns">
+						<option selected value="s1">인스타그램
+						<option value="s2">페이스북
+						<option value="s3">트위터
+				</select></td>
+				<th>사진</th>
+				<td><input type="file" id="photo" name="photo"
+					accpet=".png, .jpg, .gif"></td>
+			</tr>
+			<tr>
+				<th>홈페이지</th>
+				<td><input type="text" id="homepg" name="homepg"></td>
+				<th>직업(희망직업)</th>
+				<td><input type="text" id="job" name="job"></td>
+			</tr>
+			<tr>
+				<th>결혼여부</th>
+				<td><input type="radio" id="marry" name="marry" value="y">기혼
+					<input type="radio" id="marry" name="marry" value="n">미혼</td>
+				<th>결혼기념일</th>
+				<td><input type="date" id="ma_day" name="ma_day"></td>
+			</tr>
+			<tr>
+				<th>자녀유무</th>
+				<td><input type="radio" id="child" name="child" value="y">유
+					<input type="radio" id="child" name="child" value="n">무</td>
+				<th>좋아하는 색깔</th>
+				<td><input type="color" id="color" name="color"></td>
+			</tr>
+			<tr>
+				<th>취미</th>
+				<!-- <td colspan="3"><input type="checkbox" id="hobby" name="hobby">독서
 		 	<input type="checkbox" id="hobby" name="hobby">영화보기
 		 	<input type="checkbox" id="hobby" name="hobby">음악감상
-		 	<input type="checkbox" id="hobby" name="hobby">등산</td>
-		</tr>
-	</table>
-	<hr>
-	<table border="1" width="1000px">
-		<tr>
-			<th colspan="5">프로젝트 참여</th>
-		</tr>
-		<tr>
-			<th>번호</th>
-			<th>프로젝트명</th>
-			<th>참여기간</th>
-			<th>역할</th>
-			<th>발주사</th>
-		</tr>
-		<tr>
-			<th>1</th>
-			<td><input type="text" id="pj_name" name="pj_name"></td>
-			<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s"> 종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
-			<td><input type="text" id="role" name="role" size="10"></td>
-			<td><input type="text" id="company" name="company"></td>
-		</tr>
-		<tr>
-			<th>2</th>
-			<td><input type="text" id="pj_name" name="pj_name"></td>
-			<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s"> 종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
-			<td><input type="text" id="role" name="role" size="10"></td>
-			<td><input type="text" id="company" name="company"></td>
-		</tr>
-		<tr>
-			<th>3</th>
-			<td><input type="text" id="pj_name" name="pj_name"></td>
-			<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s"> 종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
-			<td><input type="text" id="role" name="role" size="10"></td>
-			<td><input type="text" id="company" name="company"></td>
-		</tr>
-		<tr>
-			<th>4</th>
-			<td><input type="text" id="pj_name" name="pj_name"></td>
-			<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s"> 종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
-			<td><input type="text" id="role" name="role" size="10"></td>
-			<td><input type="text" id="company" name="company"></td>
-		</tr>
-	</table>
-	<hr>
-	<table border="1" width="650px">
-		<tr>
-			<th>본인 소개</th>
-		</tr>
-		<tr>
-			<td><textarea></textarea></td>
-		</tr>
-	</table>
+		 	<input type="checkbox" id="hobby" name="hobby">등산</td> -->
+				<td colspan="3">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox"
+							id="inlineCheckbox1" value="option1"> <label
+							class="form-check-label" for="inlineCheckbox1">영화보기</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox"
+							id="inlineCheckbox2" value="option2"> <label
+							class="form-check-label" for="inlineCheckbox2">음악감상</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox"
+							id="inlineCheckbox3" value="option3"> <label
+							class="form-check-label" for="inlineCheckbox3">등산</label>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table class="table table-secondary">
+			<tr>
+				<th colspan="5">프로젝트 참여</th>
+			</tr>
+			<tr>
+				<th>번호</th>
+				<th>프로젝트명</th>
+				<th>참여기간</th>
+				<th>역할</th>
+				<th>발주사</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td><input type="text" id="pj_name" name="pj_name"></td>
+				<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s">
+					종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
+				<td><input type="text" id="role" name="role" size="10"></td>
+				<td><input type="text" id="company" name="company"></td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td><input type="text" id="pj_name" name="pj_name"></td>
+				<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s">
+					종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
+				<td><input type="text" id="role" name="role" size="10"></td>
+				<td><input type="text" id="company" name="company"></td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td><input type="text" id="pj_name" name="pj_name"></td>
+				<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s">
+					종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
+				<td><input type="text" id="role" name="role" size="10"></td>
+				<td><input type="text" id="company" name="company"></td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<td><input type="text" id="pj_name" name="pj_name"></td>
+				<td>시작일 : <input type="month" id="pj_month_s" name="pj_month_s">
+					종료일 : <input type="month" id="pj_month_l" name="pj_month_l"></td>
+				<td><input type="text" id="role" name="role" size="10"></td>
+				<td><input type="text" id="company" name="company"></td>
+			</tr>
+		</table>
+		<hr>
+		<table class="table table-primary">
+			<tr>
+				<th>본인 소개</th>
+			</tr>
+			<tr>
+				<td><textarea></textarea></td>
+			</tr>
+		</table>
 	</form>
-	<a href="./memberList.html">목록</a>
+	<!-- <a href="./memberList.html">목록</a> -->
+	<div id="button">
+		<button type="button" class="btn btn-outline-secondary"
+			onclick="location.href='./memberList.html'">목록</button>
+	</div>
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
 </body>
 </html>
