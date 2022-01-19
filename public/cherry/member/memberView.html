@@ -21,8 +21,12 @@ th, td {
 	margin-right: 25%;
 	margin-bottom: 100px;
 }
-#a_center{
+
+#a_center {
 	text-align: center;
+}
+.this_modal:hover {
+	cursor: pointer;
 }
 </style>
 </head>
@@ -53,10 +57,10 @@ th, td {
 	</nav>
 	<div>
 		<table class="table">
-			<tr >
-				<th class="table-active" style="width:20%">이름</th>
-				<td style="width:30%">한예린</td>
-				<th class="table-active" style="width:20%">성별</th>
+			<tr>
+				<th class="table-active" style="width: 20%">이름</th>
+				<td style="width: 30%">한예린</td>
+				<th class="table-active" style="width: 20%">성별</th>
 				<td>여</td>
 			</tr>
 			<tr>
@@ -77,13 +81,17 @@ th, td {
 			</tr>
 			<tr>
 				<th class="table-active">모바일</th>
-				<td>010-1234-5678</td>
+				<td>010-1234-5678 <span class="badge bg-primary this_modal"
+					data-bs-toggle="modal" data-bs-target="#mobileModal"
+					data-bs-whatever="010-1234-5678">SMS</span></td>
 				<th class="table-active">모바일 마케팅 수신 동의</th>
 				<td>아니오</td>
 			</tr>
 			<tr>
 				<th class="table-active">이메일</th>
-				<td>hanye0216@naver.com</td>
+				<td>hanye0216@naver.com <span class="badge bg-primary this_modal"
+					data-bs-toggle="modal" data-bs-target="#emailModal"
+					data-bs-whatever="hanye0216@naver.com">email</span></td>
 				<th class="table-active">이메일 마케팅 수신 동의</th>
 				<td>예</td>
 			</tr>
@@ -129,7 +137,8 @@ th, td {
 				<th class="table-active">자녀유무</th>
 				<td>무</td>
 				<th class="table-active">좋아하는 색깔</th>
-				<td><input type="color" id="color" name="color" value="#E0FFDB" disabled></td>
+				<td><input type="color" id="color" name="color" value="#E0FFDB"
+					disabled></td>
 			</tr>
 			<tr>
 				<th class="table-active">취미</th>
@@ -138,39 +147,39 @@ th, td {
 		</table>
 		<hr>
 		<div>
-		<table class="table table-secondary" id="a_center">
-			<tr>
-				<th colspan="5" class="text-center">프로젝트 참여</th>
-			</tr>
-			<tr>
-				<th class="text-center">번호</th>
-				<th class="text-center">프로젝트명</th>
-				<th>참여기간</th>
-				<th>역할</th>
-				<th>발주사</th>
-			</tr>
-			<tr>
-				<th>1</th>
-				<td>모바일 어플리케이션</td>
-				<td>2021.03-2021.12</td>
-				<td>개발</td>
-				<td>AAA company</td>
-			</tr>
-			<tr>
-				<th>2</th>
-				<td>모바일 어플리케이션</td>
-				<td>2020.03-2021.12</td>
-				<td>개발</td>
-				<td>BBB company</td>
-			</tr>
-			<tr>
-				<th>3</th>
-				<td>모바일 어플리케이션</td>
-				<td>2019.03-2021.12</td>
-				<td>개발</td>
-				<td>CCC company</td>
-			</tr>
-		</table>
+			<table class="table table-secondary" id="a_center">
+				<tr>
+					<th colspan="5" class="text-center">프로젝트 참여</th>
+				</tr>
+				<tr>
+					<th class="text-center">번호</th>
+					<th class="text-center">프로젝트명</th>
+					<th>참여기간</th>
+					<th>역할</th>
+					<th>발주사</th>
+				</tr>
+				<tr>
+					<th>1</th>
+					<td>모바일 어플리케이션</td>
+					<td>2021.03-2021.12</td>
+					<td>개발</td>
+					<td>AAA company</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td>모바일 어플리케이션</td>
+					<td>2020.03-2021.12</td>
+					<td>개발</td>
+					<td>BBB company</td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<td>모바일 어플리케이션</td>
+					<td>2019.03-2021.12</td>
+					<td>개발</td>
+					<td>CCC company</td>
+				</tr>
+			</table>
 		</div>
 		<hr>
 		<table class="table table-primary">
@@ -191,11 +200,12 @@ th, td {
 				onclick="location.href='./memberList.html'">목록</button>
 			<button type="button" class="btn btn-warning"
 				onclick="location.href='./memberEdit.html'">수정</button>
-			<button type="button" class="btn btn-danger"
-				 data-bs-toggle="modal" data-bs-target="#deleteModal">삭제</button>
+			<button type="button" class="btn btn-danger" data-bs-toggle="modal"
+				data-bs-target="#deleteModal">삭제</button>
 		</div>
 	</div>
-
+	
+	
 	<!-- modal -->
 
 	<div class="modal fade" id="deleteModal" tabindex="-1"
@@ -211,13 +221,72 @@ th, td {
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-bs-dismiss="modal">취소</button>
-					<button type="button" class="btn btn-danger" onclick="location.href='./memberList.html'">삭제</button>
+					<button type="button" class="btn btn-danger"
+						onclick="location.href='./memberList.html'">삭제</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<div class="modal fade" id="emailModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="emailModallabel">메일 전송 </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-3">
+							<label for="recipient-name" class="col-form-label">메일 주소 : </label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="mb-3">
+							<label for="message-text" class="col-form-label">내용 : </label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Send message</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="modal fade" id="mobileModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">SMS 전송 </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-3">
+							<label for="recipient-name" class="col-form-label">전화번호 : </label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="mb-3">
+							<label for="message-text" class="col-form-label">내용 : </label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Send message</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- modal -->
 
 	<script type="text/javascript">
@@ -238,6 +307,42 @@ th, td {
 				alert('사용할 수 없는 기능입니다.', 'danger')
 			})
 		}
+		
+		var exampleModal = document.getElementById('emailModal')
+		exampleModal.addEventListener('show.bs.modal', function (event) {
+		  // Button that triggered the modal
+		  var button = event.relatedTarget
+		  // Extract info from data-bs-* attributes
+		  var recipient = button.getAttribute('data-bs-whatever')
+		  // If necessary, you could initiate an AJAX request here
+		  // and then do the updating in a callback.
+		  //
+		  // Update the modal's content.
+		  var modalTitle = exampleModal.querySelector('.modal-title')
+		  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+		  modalTitle.textContent = recipient + '님께 메일 전송'
+		  modalBodyInput.value = recipient
+		})
+		
+		var exampleModal2 = document.getElementById('mobileModal')
+		exampleModal2.addEventListener('show.bs.modal', function (event) {
+		  // Button that triggered the modal
+		  var button = event.relatedTarget
+		  // Extract info from data-bs-* attributes
+		  var recipient = button.getAttribute('data-bs-whatever')
+		  // If necessary, you could initiate an AJAX request here
+		  // and then do the updating in a callback.
+		  //
+		  // Update the modal's content.
+		  var modalTitle = exampleModal2.querySelector('.modal-title')
+		  var modalBodyInput = exampleModal2.querySelector('.modal-body input')
+
+		  modalTitle.textContent = recipient + '님께 SMS 전송'
+		  modalBodyInput.value = recipient
+		})
+		
+		
 	</script>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
