@@ -20,17 +20,20 @@ table, th, td {
 th, td {
 	padding: 5px;
 }
-a:link { 
-		color: #353535; 
-		text-decoration: none;
-	}
- 	a:visited { 
-	 	color: #353535; 
-	 	text-decoration: none;
- 	}
- 	a:hover { 
-	 	text-decoration: underline;
- 	}
+
+a:link {
+	color: #353535;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #353535;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
 </style>
 </head>
 
@@ -46,17 +49,42 @@ a:link {
 			</button>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link" href="../../index.html">처음으로</a></li>
-					<li class="nav-item"><a class="nav-link" href="./memberList.html">회원목록</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="./memberForm.html">회원등록</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="../../index.html">처음으로</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./memberList.html">회원목록</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./memberForm.html">회원등록</a></li>
 					<li class="nav-item" id="liveAlertLi"><a class="nav-link">계정변경</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+	<!-- 검색 -->
+	<form action="" method="post" id="" name=""
+		enctype="multipart/form-data">
+		<div class="row g-3 align-items-center" style="margin: 10px;">
+			<div class="col-auto">
+				<select class="form-select"
+					aria-label=".form-select-sm example" style="margin-bottom:15px;">
+					<option value="1" selected>이름</option>
+					<option value="2">아이디</option>
+					<option value="3">모바일</option>
+				</select>
+			</div>
+			<div class="col-auto" ">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control"
+						aria-label="Recipient's username" aria-describedby="button-addon2">
+					<button class="btn btn-outline-secondary" type="button"
+						id="button-addon2" onclick="location.href='./memberList.html'">검색</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<!-- 검색 -->
 	<table class="table table-success">
 		<tr>
 			<th>no</th>
@@ -136,18 +164,20 @@ a:link {
 	<script type="text/javascript">
 		var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 		var alertTrigger = document.getElementById('liveAlertLi')
-	
+
 		function alert(message, type) {
-		  var wrapper = document.createElement('div')
-		  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-	
-		  alertPlaceholder.append(wrapper)
+			var wrapper = document.createElement('div')
+			wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">'
+					+ message
+					+ '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+			alertPlaceholder.append(wrapper)
 		}
-	
+
 		if (alertTrigger) {
-		  alertTrigger.addEventListener('click', function () {
-		    alert('사용할 수 없는 기능입니다.', 'danger')
-		  })
+			alertTrigger.addEventListener('click', function() {
+				alert('사용할 수 없는 기능입니다.', 'danger')
+			})
 		}
 	</script>
 	<script

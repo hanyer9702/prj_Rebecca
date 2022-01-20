@@ -129,10 +129,49 @@ textarea {
 				<td><input type="text" class="form-control" id="nation"
 					name="nation" value="대한민국"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<th class="table-active">주소</th>
 				<td colspan="3"><input type="text" class="form-control"
 					id="address" name="address" value="서울시 관악구"></td>
+			</tr> -->
+			<tr>
+				<th class="table-active" rowspan="3">주소</th>
+				<!-- <td colspan="3"><input type="text" class="form-control"
+					id="address" name="address"></td> -->
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" style="width: 13%;">
+							<input type="text" class="form-control" id="addr_num" value="08777">
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addrModal">우편번호 검색</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" >
+							주소 : 
+						</div>
+						<div class="col-auto"  style="width: 50%;">
+							<input type="text" class="form-control" id="addr1" value="서울 관악구 신림로 318">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" >
+							상세 주소 : 
+						</div>
+						<div class="col-auto"  style="width: 46%;">
+							<input type="text" class="form-control" id="addr2" value="1층">
+						</div>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<th class="table-active">모바일</th>
@@ -186,8 +225,26 @@ textarea {
 			</tr>
 			<tr>
 				<th class="table-active">이메일</th>
-				<td><input type="text" class="form-control" id="email"
-					name="email" value="hanye0216@naver.com"></td>
+				<!-- <td><input type="text" class="form-control" id="email"
+					name="email" value="hanye0216@naver.com"></td> -->
+				<td>
+					<div class="row g-3 align-items-center">
+						<div class="col-auto">
+							<input type="text" id="email" name="email" class="form-control" value="hanye0216">
+						</div>
+						<div class="col-auto">
+							@
+						</div>
+						<div class="col-auto" style="width:35%;">
+							<select class="form-select" aria-label="Default select example">
+							  <option>선택</option>
+							  <option value="1" selected>naver.com</option>
+							  <option value="2">daum.net</option>
+							  <option value="3">gmail.com</option>
+							</select>
+						</div>
+					</div>
+				</td>
 				<th class="table-active">이메일 마케팅 수신 동의</th>
 				<!-- <td><input type="radio" id="agree2" name="agree2" value="y">예
 					<input type="radio" id="agree2" name="agree2" value="n">아니오</td> -->
@@ -509,51 +566,117 @@ textarea {
 
 	<!-- modal -->
 
-	<div class="modal fade" id="exampleModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">비밀번호 변경</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
+				<form class="row g-3 needs-validation" action="./memberEdit.html" method="post" id="passForm" name="" enctype="multipart/form-data" novalidate>
 				<div class="modal-body">
-					<form>
 						<div class="mb-3">
-							<label for="recipient-name" class="col-form-label">현재
-								비밀번호</label> <input type="password" class="form-control"
-								id="recipient-name1">
+							<label for="recipient-name1" class="col-form-label">현재 비밀번호</label> 
+							<input type="password" class="form-control" id="recipient-name1" required>
+							<div class="invalid-feedback">
+						        현재 비밀번호를 입력하세요.
+						      </div>
 						</div>
 						<div class="mb-3">
-							<label for="recipient-name" class="col-form-label">변경
-								비밀번호</label> <input type="password" class="form-control"
-								id="recipient-name2">
+							<label for="recipient-name2" class="col-form-label">변경 비밀번호</label>
+							 <input type="password" class="form-control" id="recipient-name2" required>
+							 <div class="invalid-feedback">
+						     	변경할 비밀번호를 입력하세요.
+						    </div>
 						</div>
 						<div class="mb-3">
-							<label for="recipient-name" class="col-form-label">변경
-								비밀번호 재입력</label> <input type="password" class="form-control"
-								id="recipient-name3">
+							<label for="recipient-name3" class="col-form-label">변경 비밀번호 재입력</label> 
+							<input type="password" class="form-control" id="recipient-name3" required>
+							<div class="invalid-feedback">
+						      변경할 비밀번호를 한번 더 입력하세요.
+						    </div>
 						</div>
-					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">취소</button>
-					<button type="button" class="btn btn-primary">변경하기</button>
+					<button type="button" class="btn btn-secondary"	data-bs-dismiss="modal">취소</button>
+					<button type="submit" class="btn btn-primary">변경하기</button>
 				</div>
+				</form>
 			</div>
 		</div>
 	</div>
-
-
+	
+	<!-- modal -->
+	
+	<div class="modal fade" id="addrModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" >
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">주소 검색</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <input type="text" class="form-control" id="recipient-name" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+	          </div>
+	          <div class="mb-3">
+	            <div style="margin: 10px;">
+	            	<h4>tip</h4>
+	            	<h6>아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.<h6></h6><br>
+	            	
+	            	<h6>도로명 + 건물번호</h6>
+	            	<h6 class="b6">예) 판교역로 235, 제주 첨단로 242</h6>
+	            	<h6>지역명(동/리) + 번지</h6>
+	            	<h6 class="b6">예) 삼평동 681, 제주 영평동 2181</h6>
+	            	<h6>지역명(동/리) + 건물명(아파트명)</h6>
+	            	<h6 class="b6">예) 분당 주공, 연수동 주공3차</h6>
+	            	<h6>사서함명 + 번호</h6>
+	            	<h6 class="b6">예) 분당우체국사서함 1~100</h6>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- modal -->
 	<!-- <a href="./memberList.html" class="btn btn-danger">삭제</a> -->
 
-	<!-- modal -->
 	<script type="text/javascript">
 		function here() {
-			document.getElementById("form").submit();
+			document.getElementById("passForm").submit();
 		}
+		
+		/* validation */
+		
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+		  'use strict'
+		
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+		
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+		      form.addEventListener('submit', function (event) {
+		        if (!form.checkValidity()) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+		
+		        form.classList.add('was-validated')
+		      }, false)
+		    })
+		})()
+	
+	/* validation */
+	
 	</script>
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script

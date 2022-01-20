@@ -30,6 +30,12 @@ textarea {
 	border: none;
 	resize: none;
 }
+h6{
+	 font-size:14px;
+}
+.b6{
+	color: blue;
+}
 </style>
 </head>
 
@@ -120,9 +126,43 @@ textarea {
 					name="nation"></td>
 			</tr>
 			<tr>
-				<th class="table-active">주소</th>
-				<td colspan="3"><input type="text" class="form-control"
-					id="address" name="address"></td>
+				<th class="table-active" rowspan="3">주소</th>
+				<!-- <td colspan="3"><input type="text" class="form-control"
+					id="address" name="address"></td> -->
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" style="width: 13%;">
+							<input type="text" class="form-control" id="addr_num">
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addrModal">우편번호 검색</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" >
+							주소 : 
+						</div>
+						<div class="col-auto"  style="width: 50%;">
+							<input type="text" class="form-control" id="addr1">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="row g-3 align-items-center">
+						<div class="col-auto" >
+							상세 주소 : 
+						</div>
+						<div class="col-auto"  style="width: 46%;">
+							<input type="text" class="form-control" id="addr2">
+						</div>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<th class="table-active">모바일</th>
@@ -174,8 +214,26 @@ textarea {
 			</tr>
 			<tr>
 				<th class="table-active">이메일</th>
-				<td><input type="text" id="email" name="email"
-					class="form-control"></td>
+				<!-- <td><input type="text" id="email" name="email"
+					class="form-control"></td> -->
+				<td>
+					<div class="row g-3 align-items-center">
+						<div class="col-auto">
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+						<div class="col-auto">
+							@
+						</div>
+						<div class="col-auto" style="width:35%;">
+							<select class="form-select" aria-label="Default select example">
+							  <option selected>선택</option>
+							  <option value="1">naver.com</option>
+							  <option value="2">daum.net</option>
+							  <option value="3">gmail.com</option>
+							</select>
+						</div>
+					</div>
+				</td>
 				<th class="table-active">이메일 마케팅 수신 동의</th>
 				<!-- <td><input type="radio" id="agree2" name="agree2" value="y">예
 					<input type="radio" id="agree2" name="agree2" value="n">아니오</td> -->
@@ -493,6 +551,46 @@ textarea {
 		<button type="button" class="btn btn-outline-secondary"
 			onclick="location.href='./memberList.html'">돌아가기</button>
 	</div>
+	<!-- modal -->
+	
+	<div class="modal fade" id="addrModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" >
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">주소 검색</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <input type="text" class="form-control" id="recipient-name" placeholder="예) 판교역로 235, 분당 주공, 삼평동 681">
+	          </div>
+	          <div class="mb-3">
+	            <div style="margin: 10px;">
+	            	<h4>tip</h4>
+	            	<h6>아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.<h6></h6><br>
+	            	
+	            	<h6>도로명 + 건물번호</h6>
+	            	<h6 class="b6">예) 판교역로 235, 제주 첨단로 242</h6>
+	            	<h6>지역명(동/리) + 번지</h6>
+	            	<h6 class="b6">예) 삼평동 681, 제주 영평동 2181</h6>
+	            	<h6>지역명(동/리) + 건물명(아파트명)</h6>
+	            	<h6 class="b6">예) 분당 주공, 연수동 주공3차</h6>
+	            	<h6>사서함명 + 번호</h6>
+	            	<h6 class="b6">예) 분당우체국사서함 1~100</h6>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- modal -->
+	
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
