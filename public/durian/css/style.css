@@ -1,0 +1,12 @@
+/* header */
+.mainIcon{
+	width: 100px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+
+
+/* footer */
+.bottom_span{
+		font-size: 5px;
+}
