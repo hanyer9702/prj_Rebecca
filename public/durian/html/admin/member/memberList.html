@@ -33,12 +33,45 @@
 	.middle_sec div{
 		padding-bottom: 5px;
 	}
+	.modalM{
+		display:none;
+	}
 	/* h1{
 		font-size: 3rem;
 	}
 	h5{
 		font-size: 2rem;
 	} */
+	@media screen and (max-width:540px){
+		h5{
+			display:none;
+		}
+		h1{
+			font-size:20px;
+		}
+		.circle{
+		width: 45px;
+		height: 45px;
+		}
+		.circle img{
+			top: 3px;
+			left: 4px;
+			width: 35px;
+			height: 35px;
+		}
+		.middle_sec{
+			display: none;
+		}
+		.modalM{
+			display: block;
+			text-align: center;
+		}
+		.modalBtn{
+			display: inline;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 </style>
 </head>
 <body>
@@ -75,11 +108,11 @@
 	 			</div>
 	 		</div> -->
 	 		<div class="row">
-	 			<div class="col-4 col-sm-6">
-	 				<img style="max-width:20%;" class="mainIcon" alt="" src="../../../images/admin/icon_main_128.png" onclick="location.href='';">
+	 			<div class="col-11 col-sm-6">
+	 				<img style="max-width:15%;" class="mainIcon" alt="" src="../../../images/admin/icon_main_128.png" onclick="location.href='';">
 		 			<h1 style="display: inline-block; padding-left: 10px;">Rebecca Company</h1>
 	 			</div>
-	 			<div class="col-8 col-sm-4 offset-sm-2">
+	 			<div class="col-1 col-sm-4 offset-sm-2">
 	 				<div style="float: right; max-length:20%; display: inline-block; padding-left: 10px;">
 		 				<h5>icebear(manager)</h5>
 		 				<h5>administrator</h5>
@@ -138,6 +171,71 @@
 		</nav>
 	 	<section>
 	 		<h3>회원 목록</h3>
+	 		
+	 		<div class="modalM">
+		 		<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary modalBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				  Launch demo modal
+				</button>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="row row-cols-2 row-cols-sm-4 g-3 align-items-center">
+					 		<div class="col-6 col-sm-3">
+					 			<select class="form-select">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+					 		</div>
+					 		<div class="col-6 col-sm-3">
+					 			<select class="form-select">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+					 		</div>
+					 		<div class="col-6 col-sm-3">
+					 			<input type="text" id="startDate" class="form-control" placeholder="시작일">
+					 		</div>
+					 		<div class="col-6 col-sm-3">
+					 			<input type="text" id="endDate" class="form-control" placeholder="종료일">
+					 		</div>
+					 		<div class="col-6 col-sm-3">
+					 			<select class="form-select">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+					 		</div>
+					 		<div class="col-6 col-sm-3">
+					 			<input type="text" id="startDate" class="form-control" placeholder="검색어">
+					 		</div>
+		 				</div>
+				      </div>
+				      <div class="modal-footer">
+				        <!-- 
+				        <button type="button" class="btn btn-primary">Save changes</button> -->
+				        <button type="button" class="btn btn-outline-secondary">검색</button>
+					 	<button type="button" class="btn btn-outline-danger">초기화</button>
+					 	<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+		 		<!-- modal end -->
+		 	</div>
+	 		
 	 		<div class="middle_sec">
 		 		<div class="row row-cols-2 row-cols-sm-4 g-3 align-items-center">
 			 		<div class="col-6 col-sm-3">
@@ -185,7 +283,7 @@
 	 			<div class="col-6 col-sm-3">
 	 				<h4 style="float: left;">Total : 7777</h4>
 	 			</div>
-	 			<div class="col-1 offset-4 offset-sm-8 px-1 px-sm-3">
+	 			<div class="col-2 col-sm-1 offset-4 offset-sm-8 px-1 px-sm-3">
 	 				<select class="form-select form-select-sm" >
 						<option value="1" selected>5</option>
 						<option value="2">10</option>
