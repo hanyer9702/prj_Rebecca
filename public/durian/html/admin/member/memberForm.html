@@ -278,7 +278,7 @@
 						<div class="col-6 col-md-7">
 							<input type="text" id="userEmail" name="userEmail" class="form-control">
 						</div>
-						<div class="col-auto">
+						<div class="col-1 col-md-auto">
 							@
 						</div>
 						<div class="col-5 col-md-4">
@@ -308,7 +308,7 @@
 						</div>
 					</div>
 					<div class="mb-3 col-sm-6">
-					    <label for="userName" class="form-label">추천인</label>
+					    <label for="userRecommender" class="form-label">추천인</label>
 					    <input type="text" class="form-control" id="userRecommender">
 					</div>
 					<div class="mb-3 col-sm-6">
@@ -323,13 +323,53 @@
 						</select>
 					</div>
 					<div class="mb-3 col-sm-6">
-						<label for="userPasswordQuestion" class="form-label">비밀번호 문제</label>
-						<select id="pass_qu" name="pass_qu"	class="form-select">
+						<label for="userPasswordQuestion" class="form-label">비밀번호 찾기 문제</label>
+						<select id="userPasswordQuestion" name="userPasswordQuestion"	class="form-select">
 							<option selected>질문</option>
 							<option value="1">내가 졸업한 초등학교는?</option>
 							<option value="2">제일 친한 친구는?</option>
 							<option value="3">아버지 성함은?</option>
 						</select>
+					</div>
+					<div class="mb-3 col-sm-6">
+					    <label for="userPasswordAnswer" class="form-label">비밀번호 찾기 답</label>
+					    <input type="text" class="form-control" id="userPasswordAnswer">
+					</div>
+					<div class="mb-3 col-sm-6">
+						<label for="userSns" class="form-label">SNS</label>
+						<select id="userSns" name="userSns"	class="form-select">
+							<option selected>sns선택</option>
+							<option value="1">인스타그램</option>
+							<option value="2">페이스북</option>
+							<option value="3">트위터</option>
+						</select>
+					</div>
+					<div class="mb-3 col-sm-6">
+					    <label for="userHomepage" class="form-label">홈페이지</label>
+					    <input type="text" class="form-control" id="userHomepage">
+					</div>
+					<div class="col-sm-6 row align-items-center mb-3 ps-4 me-2">
+				  		<label for="" class="form-label">결혼여부</label>
+					  <div class="form-check col-3 col-md-2">
+						  <input class="form-check-input" type="radio" name="userMarriage" id="userMarriageY">
+						  <label class="form-check-label" for="userMarriageY">
+						    기혼
+						  </label>
+						</div>
+						<div class="form-check col-3 col-md-2">
+						  <input class="form-check-input" type="radio" name="userMarriage" id="userMarriageN">
+						  <label class="form-check-label" for="userMarriageN">
+						    미혼
+						  </label>
+						</div>
+					</div>
+					<div class="mb-3 col-sm-6">
+					    <label for="userWeddingAniversary" class="form-label">결혼기념일</label>
+					    <input type="date" class="form-control" id="userWeddingAniversary">		
+				  </div>
+				  <div class="mb-3 col-sm-6">
+					    <label for="userChildrenNum" class="form-label">자녀수</label>
+					    <input type="text" class="form-control" id="userChildrenNum">
 					</div>
 				</div>
 			  <div class="mb-3 form-check">
