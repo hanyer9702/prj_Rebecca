@@ -44,6 +44,29 @@
 		width: 150px;
 		float: left;
 	}
+	.itemPhoto img{
+		width:100px;
+	}
+	.orderInfo{
+		margin-left:auto;
+		margin-right: auto;
+		text-align:center;
+		width:95%;
+		height: 300px;
+		border: 5px solid gray;
+		margin-top: 20px;
+	}
+	.sign{
+		width:100px;
+	}
+	.finalPrice{
+		color:blue;
+	}
+	.orderDiv{
+		text-align:center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 </style>
 <title>한예린</title>
 </head>
@@ -99,15 +122,15 @@
 			<h3>배송정보</h3>
 			<table class="table">
 				<tr>
-					<td style="width:20%;"><label for="" class="form-label">주문자 이름 *</label></td>
+					<th style="width:20%;"><label for="" class="form-label">주문자 이름 *</label></th>
 					<td><input type="text" class="form-control" id=""></td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">주문 연락처 *</label></td>
+					<th><label for="" class="form-label">주문 연락처 *</label></th>
 					<td><input type="text" class="form-control" id=""></td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">배송지 선택 *</label></td>
+					<th><label for="" class="form-label">배송지 선택 *</label></th>
 					<td style="padding: 15px;">
 						<input class="form-check-input" type="radio" name="delivery" id="delivery"> 
 						<label class="form-check-label" for="flexRadioDefault1" style="margin-right: 10px;"> 기본배송지 </label> 
@@ -119,11 +142,11 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">받으시는 분 *</label></td>
+					<th><label for="" class="form-label">받으시는 분 *</label></th>
 					<td><input type="text" class="form-control" id=""></td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">배송 주소 *</label></td>
+					<th><label for="" class="form-label">배송 주소 *</label></th>
 					<td>
 						<div class="row g-3 align-items-center">
 							<div class="col-auto">
@@ -154,7 +177,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">배송 연락처 *</label></td>
+					<th><label for="" class="form-label">배송 연락처 *</label></th>
 					<td>
 						<div class="row g-3 align-items-center">
 							<div class="col">
@@ -181,7 +204,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">주문 요청사항</label></td>
+					<th><label for="" class="form-label">주문 요청사항</label></th>
 					<td>
 						<div class="row g-3 align-items-center">
 							<div class="col-10">
@@ -197,7 +220,7 @@
 			<h3>배송 방법 선택</h3>
 			<table class="table">
 				<tr>
-					<td rowspan="2" style="width:20%;"><label for="" class="form-label">배송방법</label></td>
+					<th rowspan="2" style="width:20%;"><label for="" class="form-label">배송방법</label></th>
 					<td>
 						<input class="form-check-input" type="radio" name="delivery" id="delivery"> 
 						<label class="form-check-label" for="flexRadioDefault1" style="margin-right: 10px;"> 택배 무료 </label> 
@@ -210,7 +233,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label for="" class="form-label">배송 요청사항 (선택)</label></td>
+					<th><label for="" class="form-label">배송 요청사항 (선택)</label></th>
 					<td>
 						<select class="form-select" aria-label="Default select example">
 							<option selected>--배송시 요청사항을 선택해주세요.--</option>
@@ -222,10 +245,74 @@
 				</tr>
 			</table>
 			<h3>주문상품정보</h3>
-			<table class="table">
-				<tr></tr>
+			<table class="table table-bordered border-dark">
+				<tr style="text-align:center;">
+					<th></th>
+					<th style="width:40%;">상품정보</th>
+					<th>상품금액</th>
+					<th>수량</th>
+					<th>주문금액</th>
+					<th>배송금액/판매자</th>
+				</tr>
+				<tr class="align-middle " style="text-align:center;">
+					<td class="itemPhoto"><img src="../../images/user/sicon1.jpg"></td>
+					<th>삼성 DDR4-3200 8GB</th>
+					<td class="table-active">40,000원</td>
+					<td class="table-active">1</td>
+					<th class="table-active">40,000원</th>
+					<th class="table-active">0원</th>
+				</tr>
 			</table>
-			<button type="button" class="btn btn-success float-end">등록</button>
+			<h3>결제 정보</h3>
+			<div class="orderInfo row align-items-center">
+				<div class="orderDiv row g-3 align-items-center">
+					<div class="col-3">
+						<h5>선택상품 금액(1건)</h5>
+						<h4>40,000원</h4>
+					</div>
+					<div class="col-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+							<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+						</svg>
+					</div>
+					<div class="col-2">
+						<h5>배송금액</h5>
+						<h4>0원</h4>
+					</div>
+					<div class="col-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+							<path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+						</svg>
+					</div>
+					<div class="col-3">
+						<h2>최종 결제금액</h2>
+					</div>
+					<div class="finalPrice col-2">
+						<h3>40,000원</h3>
+					</div>
+				</div>
+			</div>
+			<h3 style="margin-top:10px;">결제 정보</h3>
+			<table class="table">
+				<tr>
+					<th rowspan="2">결제방법</th>
+					<td>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="card1" name="card" value="option1">
+							<label class="form-check-label" for="card1">신용카드</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="card2" name="card" value="option2">
+							<label class="form-check-label" for="card2">무통장입금</label>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="row align-items-center" >
+				<div class="d-grid gap-2 col-3 mx-auto" style="margin-left:auto; margin-right:auto;">
+					<button type="button" class="btn btn-success">결제하기</button>
+				</div>
+			</div>
 		</div>
 	</form>
 
