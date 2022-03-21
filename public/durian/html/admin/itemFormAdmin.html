@@ -44,54 +44,127 @@
 		width: 150px;
 		float: left;
 	}
+	td, th{
+		white-space:nowrap;
+		word-break:nowrap;
+	}
+	.circle{
+		width: 60px;
+		height: 60px;
+	}
+	.circle img{
+		top: 4px;
+		left: 4px;
+	}
+	header{
+		padding: 20px;
+		display: block;
+	}
+	section{
+		padding: 10px;
+	}
+	h3{
+		text-align: center;
+	}
+	.middle_sec{
+		border: 1px solid #BDBDBD;
+		margin: 5px;
+		padding: 10px;
+	}
+	.middle_sec div{
+		padding-bottom: 5px;
+	}
+	.modalM{
+		display:none;
+	}
+	/* h1{
+		font-size: 3rem;
+	}
+	h5{
+		font-size: 2rem;
+	} */
+	@media screen and (max-width:540px){
+		h5{
+			display:none;
+		}
+		h1{
+			font-size:20px;
+		}
+		.circle{
+		width: 45px;
+		height: 45px;
+		}
+		.circle img{
+			top: 3px;
+			left: 4px;
+			width: 35px;
+			height: 35px;
+		}
+		.middle_sec{
+			display: none;
+		}
+		.modalM{
+			display: block;
+			text-align: center;
+		}
+		.modalBtn{
+			display: inline;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 </style>
 <title>한예린</title>
 </head>
-<body onload="InitializeStaticMenu();">
+<body>
 	
-	<div class="container">
-		<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-			<img class="mainIcon d-flex align-items-center col-md-3 mb-2 mb-md-0" alt="" src="../../images/admin/icon_main_128.png" onclick="location.href='';">
-		
-			<form class="col-12 col-md-7 mb-2 justify-content-center mb-md-0">
-				<div class="input-group">
-					<input type="text" class="form-control" aria-describedby="button-addon2">
-					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-						</svg>
-					</button>
-				</div>
-			</form>
-			
-			<div class="col-md-auto text-end">
-				<a href="#" class="nav-link px-2 link-secondary">
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-						<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-						<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-						<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-					</svg> 로그인
-				</a>
-			</div>
-		</header>
-	</div>
-	<div class="nav-scroller bg-body shadow-sm container">
-		<nav class="nav nav-underline" aria-label="Secondary navigation">
-			<a class="nav-link active" aria-current="page" href="#">카테고리</a>
-			<!-- <a class="nav-link" href="#">
-				Friends
-				<span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
-			</a> -->
-			<a class="nav-link" href="#">가전</a>
-			<a class="nav-link" href="#">컴퓨터</a>
-			<a class="nav-link" href="#">태블릿</a>
-			<a class="nav-link" href="#">아웃도어</a>
-			<a class="nav-link" href="#">자동차</a>
-			<a class="nav-link" href="#">가구</a>
-			<a class="nav-link" href="#">식품</a>
-			<a class="nav-link" href="#">생활</a>
+	<div>
+		<header class="container-fluid">
+	 		
+	 		<div class="row">
+	 			<div class="col-11 col-sm-6">
+	 				<img style="max-width:15%;" class="mainIcon" alt="" src="../../images/admin/icon_main_128.png" onclick="location.href='';">
+		 			<h1 style="display: inline-block; padding-left: 10px;">Rebecca Company</h1>
+	 			</div>
+	 			<div class="col-1 col-sm-4 offset-sm-2">
+	 				<div style="float: right; max-length:20%; display: inline-block; padding-left: 10px;">
+		 				<h5>icebear(manager)</h5>
+		 				<h5>administrator</h5>
+		 			</div>
+	 				<div class="circle" style="float: right;">
+	 				<img alt="" src="../../images/user/icebear.jpg">
+		 			</div>
+	 			</div>
+	 		</div>
+	 	</header>
+	 	
+	 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#">Navbar</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		      <ul class="navbar-nav">
+		        <li class="nav-item">
+			    <a class="nav-link active" aria-current="page" href="#">Home</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="./member/memberList.html">회원관리</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="./itemFormAdmin.html">상품관리</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">배송관리</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">시스템관리</a>
+				  </li>
+		      </ul>
+		    </div>
+		  </div>
 		</nav>
-	</div>
 	<form id="" name="" method="get">
 		<div class="container py-3">
 			<h1>상품등록</h1>

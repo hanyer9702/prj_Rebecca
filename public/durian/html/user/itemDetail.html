@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../../_bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<link href="../../css/headers.css" rel="stylesheet" type="text/css">
+<link href="../../css/offcanvas.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+	/* header{
+		padding: 20px;
+		display: block;
+	} */
+	.scoll{
+		position: relative;
+	}
+	#STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+	a:link {
+	color: #353535;
+	text-decoration: none;
+	}
+	
+	a:visited {
+		color: #353535;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+	.leftCol{
+		text-align: center;
+	}
+	.leftCol img{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	top: 5px;
+	border-radius: 50%;
+	}
+	.rightCol{
+		width: 150px;
+		float: left;
+	}
+	.itemPhoto img{
+		width:100px;
+	}
+	.orderInfo{
+		margin-left:auto;
+		margin-right: auto;
+		text-align:center;
+		width:95%;
+		height: 300px;
+		border: 5px solid gray;
+		margin-top: 20px;
+	}
+	.sign{
+		width:100px;
+	}
+	.finalPrice{
+		color:blue;
+	}
+	.orderDiv{
+		text-align:center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.itemImg img{
+		width:30%;
+		float:left;
+	}
+	.itemSite img{
+		height:30px;
+		width:70px;
+	}
+	.middle{
+		float:left;
+	} 
+</style>
+<title>한예린</title>
+</head>
+<body>
+	
+	<div class="container">
+		<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+			<img class="mainIcon d-flex align-items-center col-md-3 mb-2 mb-md-0" alt="" src="../../images/admin/icon_main_128.png" onclick="location.href='';">
+		
+			<form class="col-12 col-md-7 mb-2 justify-content-center mb-md-0">
+				<div class="input-group">
+					<input type="text" class="form-control" aria-describedby="button-addon2">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+						</svg>
+					</button>
+				</div>
+			</form>
+			
+			<div class="col-md-auto text-end">
+				<a href="#" class="nav-link px-2 link-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+						<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						<path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+						<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+					</svg> 로그인
+				</a>
+			</div>
+		</header>
+	</div>
+	<div class="nav-scroller bg-body shadow-sm container">
+		<nav class="nav nav-underline" aria-label="Secondary navigation">
+			<a class="nav-link active" aria-current="page" href="#">카테고리</a>
+			<!-- <a class="nav-link" href="#">
+				Friends
+				<span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
+			</a> -->
+			<a class="nav-link" href="#">가전</a>
+			<a class="nav-link" href="#">컴퓨터</a>
+			<a class="nav-link" href="#">태블릿</a>
+			<a class="nav-link" href="#">아웃도어</a>
+			<a class="nav-link" href="#">자동차</a>
+			<a class="nav-link" href="#">가구</a>
+			<a class="nav-link" href="#">식품</a>
+			<a class="nav-link" href="#">생활</a>
+		</nav>
+	</div>
+	<div class="container">
+		<h3>삼성전자 DDR4-3200 (8GB)</h3>
+		<div>
+			<!-- <div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+					<path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+				</svg>
+				<span>관심</span>
+			</div> -->
+		</div>
+		<hr>
+		<div class="itemImg col-auto">
+			<img src="../../images/user/sicon1.jpg">
+		</div>
+		<div class="col-auto middle">
+			<div class="row">
+				<span class="col">최저가</span>
+				<span class="col">39,970원</span>
+				<h4 class="col"><span class="badge bg-secondary">최저가 구매하기</span></h4>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+				<label class="form-check-label" for="flexCheckChecked">
+					배송비포함
+				</label>
+			</div>
+			<div class="row itemSite">
+				<img src="../../images/user/11street.jpg">
+				<span class="col-auto">최저가 39,970원</span>
+				<span class="col-auto">2,500원</span>
+				<span class="col-auto">최대 8개월</span>
+			</div>
+			<div class="row itemSite">
+				<img src="../../images/user/tmon.jpg">
+				<span class="col-auto">최저가 39,970원</span>
+				<span class="col-auto">2,500원</span>
+			</div>
+			<div class="row itemSite">
+				<img src="../../images/user/gmarket.jpg">
+				<span class="col-auto">최저가 39,970원</span>
+				<span class="col-auto">2,500원</span>
+				<span class="col-auto">최대 8개월</span>
+			</div>
+			<div class="row itemSite">
+				<img src="../../images/user/coupang.png">
+				<span class="col-auto">최저가 39,970원</span>
+				<span class="col-auto">2,500원</span>
+			</div>
+			<div class="row itemSite">
+				<img src="../../images/user/auction.jpg">
+				<span class="col-auto">최저가 39,970원</span>
+				<span class="col-auto">2,500원</span>
+			</div>
+		</div>
+		<div class="col-auto">
+			<h4>최저가 추이</h4>
+			<div class="row">
+				<div class="col">
+					<i class="bi bi-check2" style="color:blue;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+						</svg>
+					</i>
+					<span>1개월</span>
+				</div>
+				<div class="col">
+					<i class="bi bi-check2" style="color:blue;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+						</svg>
+					</i>
+					<span>3개월</span>
+				</div>
+				<div class="col">
+					<i class="bi bi-check2" style="color:blue;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+						</svg>
+					</i>
+					<span>6개월</span>
+				</div>
+				<div class="col">
+					<i class="bi bi-check2" style="color:blue;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+						</svg>
+					</i>
+					<span>12개월</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../css/offcanvas.js"></script>
+	<script src="../../../_bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
