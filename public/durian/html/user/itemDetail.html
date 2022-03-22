@@ -3,10 +3,12 @@
 <head>
 <meta charset="uTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 <link href="../../../_bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
 <link href="../../css/headers.css" rel="stylesheet" type="text/css">
 <link href="../../css/offcanvas.css" rel="stylesheet" type="text/css">
+<link href="../../css/dashboard.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
 	/* header{
@@ -68,12 +70,12 @@
 		margin-right: auto;
 	}
 	.itemImg img{
-		width:30%;
+		width:95%;
 		float:left;
 	}
 	.itemSite img{
 		height:30px;
-		width:70px;
+		width:110px;
 	}
 	.middle{
 		float:left;
@@ -137,87 +139,105 @@
 			</div> -->
 		</div>
 		<hr>
-		<div class="itemImg col-auto">
-			<img src="../../images/user/sicon1.jpg">
-		</div>
-		<div class="col-auto middle">
-			<div class="row">
-				<span class="col">최저가</span>
-				<span class="col">39,970원</span>
-				<h4 class="col"><span class="badge bg-secondary">최저가 구매하기</span></h4>
+		<div class="row g-5">
+			<div class="itemImg col-3">
+				<img src="../../images/user/sicon1.jpg">
 			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-				<label class="form-check-label" for="flexCheckChecked">
-					배송비포함
-				</label>
-			</div>
-			<div class="row itemSite">
-				<img src="../../images/user/11street.jpg">
-				<span class="col-auto">최저가 39,970원</span>
-				<span class="col-auto">2,500원</span>
-				<span class="col-auto">최대 8개월</span>
-			</div>
-			<div class="row itemSite">
-				<img src="../../images/user/tmon.jpg">
-				<span class="col-auto">최저가 39,970원</span>
-				<span class="col-auto">2,500원</span>
-			</div>
-			<div class="row itemSite">
-				<img src="../../images/user/gmarket.jpg">
-				<span class="col-auto">최저가 39,970원</span>
-				<span class="col-auto">2,500원</span>
-				<span class="col-auto">최대 8개월</span>
-			</div>
-			<div class="row itemSite">
-				<img src="../../images/user/coupang.png">
-				<span class="col-auto">최저가 39,970원</span>
-				<span class="col-auto">2,500원</span>
-			</div>
-			<div class="row itemSite">
-				<img src="../../images/user/auction.jpg">
-				<span class="col-auto">최저가 39,970원</span>
-				<span class="col-auto">2,500원</span>
-			</div>
-		</div>
-		<div class="col-auto">
-			<h4>최저가 추이</h4>
-			<div class="row">
-				<div class="col">
-					<i class="bi bi-check2" style="color:blue;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-						</svg>
-					</i>
-					<span>1개월</span>
+			<div class="col-5">
+				<div class="row">
+					<span class="col">최저가</span>
+					<span class="col">39,970원</span>
+					<h4 class="col"><span class="badge bg-secondary">최저가 구매하기</span></h4>
 				</div>
-				<div class="col">
-					<i class="bi bi-check2" style="color:blue;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-						</svg>
-					</i>
-					<span>3개월</span>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+						배송비포함
+					</label>
 				</div>
-				<div class="col">
-					<i class="bi bi-check2" style="color:blue;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-						</svg>
-					</i>
-					<span>6개월</span>
+				<div class="row itemSite">
+					<img src="../../images/user/11street.jpg">
+					<span class="col-5">최저가 39,970원</span>
+					<span class="col-auto">2,500원</span>
+					<span class="col-auto">최대 8개월</span>
 				</div>
-				<div class="col">
-					<i class="bi bi-check2" style="color:blue;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-							<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-						</svg>
-					</i>
-					<span>12개월</span>
+				<div class="row itemSite">
+					<img src="../../images/user/tmon.jpg">
+					<span class="col-5">최저가 39,970원</span>
+					<span class="col-auto">2,500원</span>
+				</div>
+				<div class="row itemSite">
+					<img src="../../images/user/gmarket.jpg">
+					<span class="col-5">최저가 39,970원</span>
+					<span class="col-auto">2,500원</span>
+					<span class="col-auto">최대 8개월</span>
+				</div>
+				<div class="row itemSite">
+					<img src="../../images/user/coupang.png">
+					<span class="col-5">최저가 39,970원</span>
+					<span class="col-auto">2,500원</span>
+				</div>
+				<div class="row itemSite">
+					<img src="../../images/user/auction.jpg">
+					<span class="col-5">최저가 39,970원</span>
+					<span class="col-auto">2,500원</span>
+				</div>
+			</div>
+			<div class="col-4">
+				<h4>최저가 추이</h4>
+				<div class="row">
+					<div class="col">
+						<i class="bi bi-check2" style="color:blue;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+							</svg>
+						</i>
+						<span>1개월</span>
+					</div>
+					<div class="col">
+						<i class="bi bi-check2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+							</svg>
+						</i>
+						<span>3개월</span>
+					</div>
+					<div class="col">
+						<i class="bi bi-check2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+							</svg>
+						</i>
+						<span>6개월</span>
+					</div>
+					<div class="col">
+						<i class="bi bi-check2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+							</svg>
+						</i>
+						<span>12개월</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	<div>
+		<div>
+			
+		</div>
+	</div>
+	
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+	<script src="../../css/dashboard.js"></script>
 	<script src="../../css/offcanvas.js"></script>
 	<script src="../../../_bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
