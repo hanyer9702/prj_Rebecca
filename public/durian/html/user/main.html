@@ -14,7 +14,44 @@
 </style>
 <title>한예린</title>
 </head>
-<body>
+<body style="overflow-y: auto;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: sticky; ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar scroll</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Link</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	 <header>
 	 	<div class="row">
 		 	<div class="col-2 col-md-3">
@@ -35,17 +72,17 @@
 		<div>
 			
 		</div>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+		<!-- <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
 			<div class="container-fluid">
 				<button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation" aria-controls="navbarsExampleDefault">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			
 				<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-			    	<!-- <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> -->
-						<!-- <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+			    	<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+						<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
 							<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-						</a> -->
+						</a>
 								
 						<ul class="col-8 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 							<li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
@@ -78,11 +115,11 @@
 								</svg> 로그인
 							</a>
 						</div>
-						<!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+						<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
 							<input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-						</form> -->
+						</form>
 								
-						<!-- header에 쓸만한거 프로필
+						header에 쓸만한거 프로필
 						<div class="dropdown text-end">
 							<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 								<img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
@@ -94,11 +131,11 @@
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="#">Sign out</a></li>
 							</ul>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
-		</nav>
+		</nav> -->
 	 </header>
 	 <!-- <section>
 	 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
