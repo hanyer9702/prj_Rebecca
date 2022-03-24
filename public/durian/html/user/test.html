@@ -15,7 +15,7 @@
 <body style="position: relative;">
 
 
-<nav id="navbar-example" class="navbar navbar-light bg-light px-3">
+<nav id="navbar-example" class="navbar navbar-light bg-light px-3" >
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -35,7 +35,7 @@
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="overflow-y: scroll; height: 1500px;">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <h4 id="scrollspyHeading2">Second heading</h4>
@@ -58,6 +58,10 @@
 		var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 			target: '#navbar-example'
 		})
+		$(window).scroll(function(){
+	    $(".nav-item").removeClass("active");
+	    $(".active").parent().addClass("active");
+	  })
 	</script>
 	
 	

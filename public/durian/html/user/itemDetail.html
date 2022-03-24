@@ -75,6 +75,18 @@
 	.middle{
 		float:left;
 	} 
+	 div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: gray; /* Line color */
+      height: 100%; /* Override in-line if you want specific height. */
+      /* float: left; */ /* Causes the line to float to left of content.
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+    }
+    .price img{
+    	width:100px;
+    	height:40px;
+    }
 </style>
 <title>한예린</title>
 </head>
@@ -144,7 +156,7 @@
 					<span class="col">39,970원</span>
 					<h4 class="col"><span class="badge bg-secondary">최저가 구매하기</span></h4>
 				</div>
-				<div class="form-check">
+				<div class="form-check" style="background-color: #EAEAEA;">
 					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 					<label class="form-check-label" for="flexCheckChecked">
 						배송비포함
@@ -224,30 +236,284 @@
 	</div>
 	
 	<div class="container sticky-top" style="position: sticky;" data-bs-spy="scroll" data-bs-target="#navbar-example">
-		<nav id="navbar-example " class="navbar navbar-light bg-light px-3 justify-content-center">
+		<nav id="navbar-example "  class="navbar navbar-light justify-content-center" style="background-color: #e3f2fd;">
 			<ul class="nav nav-pills">
-				<li class="nav-item">
-					<h1><a class="nav-link" href="#scrollspyHeading1">가격비교</a></h1>
+				<li class="nav-item px-5">
+					<h1><a class="nav-link active" href="#scrollspyHeading1">가격비교</a></h1>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item px-5">
 					<h1><a class="nav-link" href="#scrollspyHeading2">상품 상세정보</a></h1>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item px-5">
 					<h1><a class="nav-link" href="#scrollspyHeading3">상품 의견</a></h1>
 				</li>
 			</ul>
 		</nav>
-		<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-			<h4 id="scrollspyHeading1">First heading</h4>
-			<p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<h4 id="scrollspyHeading2">Second heading</h4>
-			<p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<h4 id="scrollspyHeading3">Third heading</h4>
-			<p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<h4 id="scrollspyHeading4">Fourth heading</h4>
-			<p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<h4 id="scrollspyHeading5">Fifth heading</h4>
-			<p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="overflow-y: scroll; height: 800px;">
+			<div id="scrollspyHeading1">
+				<div class="row pt-3">
+					<div class="col-auto">
+						<i class="bi bi-check2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+							</svg>
+						</i>
+						<span>최저가순</span>
+					</div>
+					<div class="form-check col-auto">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+						<label class="form-check-label" for="flexCheckChecked">
+							배송비포함
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col price">
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+							<hr>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img src="../../images/user/11street.jpg">
+							</div>
+							<div class="col">
+								<h4>39,970원</h4>
+								<h5>(배송비 2,500원)</h5><br>
+								<span>RAM 삼성 ram ddr4-3200</span>
+							</div>
+							<div class="col">
+								<h4><span class="badge bg-secondary">구매하기</span></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="vertical-line"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+					</div>
+					<div class="col">
+						<div class="col price">
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+								<hr>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<img src="../../images/user/11street.jpg">
+								</div>
+								<div class="col">
+									<h4>39,970원</h4>
+									<h5>(배송비 2,500원)</h5><br>
+									<span>RAM 삼성 ram ddr4-3200</span>
+								</div>
+								<div class="col">
+									<h4><span class="badge bg-secondary">구매하기</span></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="scrollspyHeading2" class="container pt-5">
+				<div>
+					<h1>상품 상세정보</h1>
+					<hr>
+					
+				</div>
+				<div class="justify-content-center">
+					<div style=" text-align:center;" class="justify-content-center">
+						<img src="../../images/user/item_detail.jpg">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
