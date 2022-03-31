@@ -37,7 +37,7 @@
 		background-color: white;
 		margin-left: auto;
 		margin-right: auto;
-		height: 100%;
+		height:calc(100vh)
 	}
 	.ad{
 		width: 300px;
@@ -48,12 +48,23 @@
 <body>
 	<div class="top_body">
 		<div class="middle_body">
-			<button><img src=""></button>
-			<button><img src=""></button>
-			<footer>
+			<header class="row">
+				<div class="col">
+					<img class="mainIcon" alt="" src="../../images/admin/icon_main_128.png" onclick="location.href='';">
+				</div>
+				<h1 class="col d-flex justify-content-center">회원선택</h1>
+			</header>
+			<section style="margin-top:40px;">
+				<div class="d-flex justify-content-center row " style="margin-left:auto;margin-right:auto;">
+					<button type="button" class="btn btn-outline-secondary col-auto mx-4"><div class="row align-items-center" style="width:200px;height:200px;text-align:center;"><h3 class="col">개인회원</h3></div></button>
+					<button type="button" class="btn btn-outline-secondary col-auto mx-4"><div class="row align-items-center" style="width:200px;height:200px;text-align:center;"><h3 class="col">사업자회원</h3></div></button>
+					
+			 	</div>
+		 	</section>
+		 	<footer>
 				<span class="bottom_span">Copyright © rebecca Co., Ltd. ALl Rights Reserved.</span>
 			</footer>
-		 </div>
+	 	</div>
 	 </div>
 	 <script src="../../../_bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
