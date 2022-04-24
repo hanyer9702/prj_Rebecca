@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="uTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../../_bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/danawa_1.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	.main-header__logo{
+		margin:10px;
+	}
+</style>
+<title>buyAll</title>
+</head>
+<body>
+	<div id="danawa_wrap">
+	<!-- main-header--fixed -->
+		<div id="danawa_header" class="main-header ">
+			<div class="main-header__wrap">
+				<div class="main-header__inner">
+					<div class="main-header__banner">
+						<h1 class="main-header__logo">
+							<a href="https://www.danawa.com">
+								<span class="blind">비교하고 잘 사는, 다나와</span><img src="../../images/admin/icon_main_128.png" alt="다나와 가격비교 CI" />		</a>
+						</h1>
+						<div class="main-header__search">
+							<div class="search">
+								<form id="srchFRM_TOP" name="srchFRM_TOP" style="margin:0px;" >
+									<fieldset>
+									<legend class="blind">통합 검색</legend>
+											<div class="search__box search_area_content">
+												<input type="text" class="search__input" name="k1"  id="AKCSearch" autocomplete="off" placeholder="검색어를 입력해주세요." title="검색어 입력" value="">
+												<!-- <input id="module" name="module" value="goods" type="hidden" />
+												<input id="act" name="act" value="dispMain" type="hidden" /> -->
+												<button type="submit" class="search__submit" style="padding:5px;">
+													<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+														<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+													</svg>
+												</button>
+											</div>
+											<div style="display:none"><script type="text/javascript" src=""></script>
+											</div>				
+									</fieldset>
+								</form>
+							</div>
+						</div>
+						<div class="main-header__user">
+							
+							<!-- <div class="item">
+								<a href="#" role="button" class="btn_user btn_user--recent">
+									<span class="txt">최근</span>
+										</a>
+								<div class="layer__user-recent" role="dialog" aria-label="최근 본 상품">
+									<div class="user-recent">
+										<div class="user-recent__wrap" id="recentProduct"></div>
+										<div class="user-recent__wrap" id="recentCate"></div>
+										<div class="user-recent__wrap" id="buyingGuide"></div>
+										<button type="button" class="btn_close"><span class="blind">최근 본 상품 닫기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<a href="https://www.danawa.com/myPage/wishList.php" role="button" class="btn_user btn_user--wish">
+									<span class="txt">관심</span>
+										</a>
+							</div> -->
+							<div class="item">
+								<a href="" role="button" class="btn_user btn_user--login">
+									<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+										<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+									</svg>
+									<span class="txt">로그인</span>	
+								</a>
+								<div class="layer__user-more">
+									<ul class="more-list">
+										<li class="item_more"><a href="https://auth.danawa.com/login?url=http%3A%2F%2Fwww.danawa.com%2F" class="link_more">로그인</a></li><li class="item_more"><a href="https://auth.danawa.com/joinStep1" class="link_more">회원가입</a></li><li class="item_more"><a href="https://auth.danawa.com/login?url=http%3A%2F%2Fwww.danawa.com%2F" class="link_more">마이페이지</a></li><li class="item_more"><a href="https://auth.danawa.com/login?url=http%3A%2F%2Fwww.danawa.com%2F" class="link_more">쪽지</a></li><li class="item_more"><a href="http://adcenter.danawa.com" class="link_more">광고센터</a></li><li class="item_more"><a href="http://help.danawa.com" class="link_more">고객센터</a></li>		</ul>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="main-header__nav">
+					<a href="http://auto.danawa.com/?logger_kw=dnw_gnb_auto" class="link_nav" target="blank">자동차</a>
+					<a href="https://shop.danawa.com/shopmain/?controller=main&methods=serviceMain&serviceGroupCode=26&logger_kw=dnw_gnb_pcmain" class="link_nav" target="blank">조립PC</a>
+					<a href="https://shop.danawa.com/virtualestimate/?controller=estimateMain&methods=index&marketPlaceSeq=16&logger_kw=dnw_gnb_esti" class="link_nav" target="blank">PC견적</a>
+					<a href="http://shop.danawa.com/shopmain/?controller=main&methods=usedMarket&logger_kw=dnw_gnb_used" class="link_nav" target="blank">중고장터</a>
+					<a href="http://tour.danawa.com/?logger_kw=dnw_gnb_tour" class="link_nav" target="blank">여행</a>
+					<a href="http://plan.danawa.com/?logger_kw=dnw_gnb_plan" class="link_nav" target="blank">쇼핑기획전</a>
+					<a href="http://dpg.danawa.com/bbs?logger_kw=dnw_gnb_dpg" class="link_nav" target="blank">DPG</a>
+					<a href="http://event.danawa.com/?logger_kw=dnw_gnb_event" class="link_nav link_nav--event" target="blank">이벤트</a>
+					<span class="link_nav link_nav--dv">/</span>
+					<a href="http://event.danawa.com/experience/?logger_kw=dnw_gnb_experience" class="link_nav link_nav--experience" target="blank">체험단</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<script src="../../../_bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../../../jquery/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$('.layer__user-more').hover(function() {
+			bMyPageMoreLayer = true;
+			$('a.btn_user.btn_user--login').addClass('select');
+		}, function() {
+			bMyPageMoreLayer = false;
+			$('.layer__user-more').hide();
+			$('a.btn_user.btn_user--login').removeClass('select');
+		});
+		$('.more_nav .layer__nav-more .more-list .item_more a').last().focusout(function() {
+			$('.more_nav .layer__nav-more').removeClass('more_cate_open').hide();
+		});
+		$('.layer__user-more .more-list a.link_more').last().focusout(function() {
+			oMyPageTimeOut = window.setTimeout(function() {
+				if(bMyPageMoreLayer == false && !$(this).hasClass('select')) {
+					$('.layer__user-more').hide();
+					$('a.btn_user.btn_user--login').removeClass('select');
+				}
+			}, 100);
+		});
+		$("body").delegate(".main-header__nav .more_nav .item_more a","click",function(event) {
+			try {_trk_clickTrace("EVT", "21통합검색_GNB_더보기_"+$(this).text());} catch(_e) {}
+		});
+		$("body").delegate(".layer__user-more .item_more a","click",function(event) {
+			var text = $.trim($(this).text().replace(/ /g, ''));
+			clickTraceGNB("EVT","21통합메인_GNB_회원_"+text);
+		});
+	</script>
+</body>
+</html>
